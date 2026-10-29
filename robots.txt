@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.php$
+
+# Sitemap location
+Sitemap: https://www.devolpe.co.za/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
