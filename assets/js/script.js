@@ -6,6 +6,109 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
 
+    // Homepage hero slider
+    const heroSlider = document.querySelector('.hero-slider');
+    if (heroSlider) {
+        const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
+        const dots = Array.from(heroSlider.querySelectorAll('.hero-dot'));
+        const heroContent = heroSlider.querySelector('.hero-content');
+        const heroHeading = heroSlider.querySelector('.hero-heading');
+        const heroSubtitle = heroSlider.querySelector('.hero-subtitle');
+        const heroDescription = heroSlider.querySelector('.hero-description');
+        const progressFill = heroSlider.querySelector('.hero-progress-fill');
+        const slideCopy = [
+            {
+                heading: 'DE VOLPE Wedding Venue in eMondlo',
+                subtitle: 'Celebrate Your Story at DE VOLPE',
+                description: 'Bring your loved ones together in a setting made for meaningful moments, joyful celebrations, and memories you will treasure for years to come.'
+            },
+            {
+                heading: 'Every Detail, Beautifully Yours',
+                subtitle: 'A Venue Made for Your Vision',
+                description: 'From the first welcome to the final dance, our elegant spaces give your celebration a warm, distinctive setting that feels uniquely yours.'
+            },
+            {
+                heading: 'Where Dreams Come True',
+                subtitle: 'Celebrating Love at DE VOLPE',
+                description: 'Experience the magic of your special day at our breathtaking wedding and events venue nestled in the heart of eMondlo, KwaZulu-Natal. From intimate ceremonies to grand celebrations, we create unforgettable moments that last a lifetime.'
+            },
+            {
+                heading: 'Gather, Celebrate, Remember',
+                subtitle: 'Moments Made Magical at DE VOLPE',
+                description: 'Share the laughter, the happy tears, and the little moments in between in a venue designed to make every part of your day feel special.'
+            },
+            {
+                heading: 'Your Celebration, Your Way',
+                subtitle: 'Make DE VOLPE Yours',
+                description: 'Whether your gathering is intimate or grand, our beautiful venue is ready to become the backdrop to your next unforgettable occasion.'
+            }
+        ];
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let activeSlide = 0;
+        let autoplayTimer;
+
+        const showSlide = (index) => {
+            const nextSlide = (index + slides.length) % slides.length;
+            const copyChanged = nextSlide !== activeSlide;
+            activeSlide = nextSlide;
+            slides.forEach((slide, slideIndex) => {
+                const isActive = slideIndex === activeSlide;
+                slide.classList.toggle('is-active', isActive);
+                slide.setAttribute('aria-hidden', String(!isActive));
+            });
+            dots.forEach((dot, dotIndex) => {
+                const isActive = dotIndex === activeSlide;
+                dot.classList.toggle('is-active', isActive);
+                if (isActive) dot.setAttribute('aria-current', 'true');
+                else dot.removeAttribute('aria-current');
+            });
+            if (copyChanged && slideCopy[activeSlide]) {
+                const copy = slideCopy[activeSlide];
+                heroContent.classList.remove('is-copy-changing');
+                heroHeading.textContent = copy.heading;
+                heroSubtitle.textContent = copy.subtitle;
+                heroDescription.textContent = copy.description;
+                void heroContent.offsetWidth;
+                heroContent.classList.add('is-copy-changing');
+            }
+            if (progressFill) {
+                progressFill.classList.remove('is-running');
+                void progressFill.offsetWidth;
+                progressFill.classList.add('is-running');
+            }
+        };
+
+        const stopAutoplay = () => window.clearInterval(autoplayTimer);
+        const startAutoplay = () => {
+            stopAutoplay();
+            if (!reducedMotion && !document.hidden) {
+                autoplayTimer = window.setInterval(() => showSlide(activeSlide + 1), 6000);
+            }
+        };
+
+        heroSlider.querySelector('.hero-arrow-prev').addEventListener('click', () => {
+            showSlide(activeSlide - 1);
+            startAutoplay();
+        });
+        heroSlider.querySelector('.hero-arrow-next').addEventListener('click', () => {
+            showSlide(activeSlide + 1);
+            startAutoplay();
+        });
+        dots.forEach((dot, index) => dot.addEventListener('click', () => {
+            showSlide(index);
+            startAutoplay();
+        }));
+        heroSlider.addEventListener('mouseenter', stopAutoplay);
+        heroSlider.addEventListener('mouseleave', startAutoplay);
+        heroSlider.addEventListener('focusin', stopAutoplay);
+        heroSlider.addEventListener('focusout', (event) => {
+            if (!heroSlider.contains(event.relatedTarget)) startAutoplay();
+        });
+        document.addEventListener('visibilitychange', () => document.hidden ? stopAutoplay() : startAutoplay());
+        showSlide(0);
+        startAutoplay();
+    }
+
     // Add scroll effect to navbar
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {

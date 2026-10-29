@@ -96,29 +96,26 @@ if ($_POST && isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - DE VOLPE Wedding & Events | Book Your Dream Wedding</title>
-    <meta name="description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal. Schedule a visit, get quotes, and plan your perfect wedding celebration. Call +27 64 820 0293.">
-    <meta name="keywords" content="contact DE VOLPE, wedding venue inquiry, book wedding venue, KwaZulu-Natal wedding, wedding quote, venue visit, event booking">
-    <meta name="author" content="Serge Mugisho">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
+    <title>Contact DE VOLPE | Wedding Venue in eMondlo</title>
+    <meta name="description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal, to ask about dates, visit the venue or discuss your celebration. Call +27 64 820 0293.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.devolpe.co.za/contact.php">
-    <meta property="og:title" content="Contact Us - DE VOLPE Wedding & Events">
-    <meta property="og:description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal. Schedule a visit, get quotes, and plan your perfect wedding celebration.">
-    <meta property="og:image" content="https://www.devolpe.co.za/assets/images/ceremony_wedding_vows.jpg">
+    <meta property="og:title" content="Contact DE VOLPE | Wedding Venue in eMondlo">
+    <meta property="og:description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal, to ask about dates, visit the venue or discuss your celebration. Call +27 64 820 0293.">
+    <meta property="og:image" content="https://www.devolpe.co.za/assets/images/HERN2975.jpg">
+    <meta property="og:image:alt" content="DE VOLPE Grand Ceremony Hall in eMondlo, KwaZulu-Natal">
     <meta property="og:site_name" content="DE VOLPE Wedding & Events">
     <meta property="og:locale" content="en_ZA">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.devolpe.co.za/contact.php">
-    <meta name="twitter:title" content="Contact Us - DE VOLPE Wedding & Events">
-    <meta name="twitter:description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal. Schedule a visit, get quotes, and plan your perfect wedding celebration.">
-    <meta name="twitter:image" content="https://www.devolpe.co.za/assets/images/ceremony_wedding_vows.jpg">
+    <meta name="twitter:title" content="Contact DE VOLPE | Wedding Venue in eMondlo">
+    <meta name="twitter:description" content="Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal, to ask about dates, visit the venue or discuss your celebration. Call +27 64 820 0293.">
+    <meta name="twitter:image" content="https://www.devolpe.co.za/assets/images/HERN2975.jpg">
+    <meta name="twitter:image:alt" content="DE VOLPE Grand Ceremony Hall in eMondlo, KwaZulu-Natal">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.devolpe.co.za/contact.php">
@@ -134,24 +131,65 @@ if ($_POST && isset($_POST['submit'])) {
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact DE VOLPE Wedding & Events",
-        "description": "Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal. Schedule a visit, get quotes, and plan your perfect wedding celebration.",
-        "url": "https://www.devolpe.co.za/contact.php",
-        "mainEntity": {
-            "@type": "WeddingVenue",
-            "name": "DE VOLPE Wedding & Events",
-            "telephone": "+27648200293",
-            "email": "info@devolpe.co.za",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "R69 Mondlo/Vryheid Road",
-                "addressLocality": "eMondlo",
-                "addressRegion": "KwaZulu-Natal",
-                "postalCode": "3105",
-                "addressCountry": "ZA"
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://www.devolpe.co.za/#business",
+                "name": "DE VOLPE Wedding & Events",
+                "url": "https://www.devolpe.co.za/",
+                "logo": "https://www.devolpe.co.za/assets/images/devolpe-logo.png",
+                "telephone": "+27648200293",
+                "email": "info@devolpe.co.za",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "R69 Mondlo/Vryheid Road",
+                    "addressLocality": "eMondlo",
+                    "addressRegion": "KwaZulu-Natal",
+                    "postalCode": "3105",
+                    "addressCountry": "ZA"
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "09:00",
+                        "closes": "18:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": "Saturday",
+                        "opens": "09:00",
+                        "closes": "16:00"
+                    }
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.devolpe.co.za/#website",
+                "url": "https://www.devolpe.co.za/",
+                "name": "DE VOLPE Wedding & Events",
+                "inLanguage": "en-ZA",
+                "publisher": {"@id": "https://www.devolpe.co.za/#business"}
+            },
+            {
+                "@type": "ContactPage",
+                "@id": "https://www.devolpe.co.za/contact.php#webpage",
+                "url": "https://www.devolpe.co.za/contact.php",
+                "name": "Contact DE VOLPE | Wedding Venue in eMondlo",
+                "description": "Contact DE VOLPE wedding venue in eMondlo, KwaZulu-Natal, to ask about dates, visit the venue or discuss your celebration. Call +27 64 820 0293.",
+                "inLanguage": "en-ZA",
+                "isPartOf": {"@id": "https://www.devolpe.co.za/#website"},
+                "about": {"@id": "https://www.devolpe.co.za/#business"},
+                "mainEntity": {"@id": "https://www.devolpe.co.za/#business"}
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.devolpe.co.za/"},
+                    {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.devolpe.co.za/contact.php"}
+                ]
             }
-        }
+        ]
     }
     </script>
 </head>
@@ -161,7 +199,7 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="nav-container">
             <img src="assets/images/devolpe-logo.png" alt="DE VOLPE Wedding & Events" class="logo">
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="about.php" class="nav-link">About Us</a></li>
                 <li><a href="https://thespaceguesthouse.co.za" class="nav-link" target="_blank" rel="noopener">Book Accommodation</a></li>
                 <li><a href="contact.php" class="nav-link active">Contact Us</a></li>
@@ -179,7 +217,7 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="breadcrumb-container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item">
-                    <a href="index.php"><i class="fas fa-home"></i> Home</a>
+                    <a href="/"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></li>
                 <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
@@ -187,20 +225,11 @@ if ($_POST && isset($_POST['submit'])) {
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('assets/images/ceremony_wedding_vows.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="hero-content">
-            <h1 class="fade-in-up">Contact DE VOLPE</h1>
-            <p class="subtitle fade-in-up">Let's Plan Your Perfect Day</p>
-            <p class="fade-in-up">Ready to begin your wedding journey? We're here to help make your dreams come true</p>
-        </div>
-    </section>
-
     <!-- Contact Information -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
+                <h1 class="section-title contact-page-title">Contact DE VOLPE in eMondlo</h1>
                 <p>We're excited to hear about your wedding plans and discuss how DE VOLPE can make your day extraordinary</p>
             </div>
             <div class="grid grid-2">
@@ -375,7 +404,7 @@ if ($_POST && isset($_POST['submit'])) {
                 <p>See the beauty of DE VOLPE in person and envision your perfect wedding day</p>
                 <div style="margin-top: 2rem;">
                     <a href="tel:+27648200293" class="btn btn-primary" style="margin-right: 1rem;">Call Now</a>
-                    <a href="mailto:info@devolpe.co.za" class="btn btn-secondary">Email Us</a>
+                    <a href="mailto:info@devolpe.co.za" class="btn btn-secondary page-cta-secondary">Email Us</a>
                 </div>
             </div>
         </div>

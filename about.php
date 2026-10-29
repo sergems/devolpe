@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - DE VOLPE Wedding & Events Venue | Our Story & Services</title>
-    <meta name="description" content="Discover the story behind DE VOLPE wedding venue. Learn about our elegant facilities, accommodations, and wedding packages in eMondlo, KwaZulu-Natal.">
-    <meta name="keywords" content="DE VOLPE about, wedding venue story, wedding facilities, KwaZulu-Natal events, wedding packages, venue services, South African wedding venue">
-    <meta name="author" content="Serge Mugisho">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
+    <title>About DE VOLPE | Wedding Venue in eMondlo</title>
+    <meta name="description" content="Explore DE VOLPE's ceremony hall, reception space and garden in eMondlo, KwaZulu-Natal. Discover our wedding facilities, story and services.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.devolpe.co.za/about.php">
-    <meta property="og:title" content="About Us - DE VOLPE Wedding & Events Venue">
-    <meta property="og:description" content="Discover the story behind DE VOLPE wedding venue. Learn about our elegant facilities, accommodations, and wedding packages in eMondlo, KwaZulu-Natal.">
-    <meta property="og:image" content="https://www.devolpe.co.za/assets/images/outdoor_wedding_embrace.jpg">
+    <meta property="og:title" content="About DE VOLPE | Wedding Venue in eMondlo">
+    <meta property="og:description" content="Explore DE VOLPE's ceremony hall, reception space and garden in eMondlo, KwaZulu-Natal. Discover our wedding facilities, story and services.">
+    <meta property="og:image" content="https://www.devolpe.co.za/assets/images/HERN2975.jpg">
+    <meta property="og:image:alt" content="DE VOLPE Grand Ceremony Hall in eMondlo, KwaZulu-Natal">
     <meta property="og:site_name" content="DE VOLPE Wedding & Events">
     <meta property="og:locale" content="en_ZA">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.devolpe.co.za/about.php">
-    <meta name="twitter:title" content="About Us - DE VOLPE Wedding & Events Venue">
-    <meta name="twitter:description" content="Discover the story behind DE VOLPE wedding venue. Learn about our elegant facilities, accommodations, and wedding packages.">
-    <meta name="twitter:image" content="https://www.devolpe.co.za/assets/images/outdoor_wedding_embrace.jpg">
+    <meta name="twitter:title" content="About DE VOLPE | Wedding Venue in eMondlo">
+    <meta name="twitter:description" content="Explore DE VOLPE's ceremony hall, reception space and garden in eMondlo, KwaZulu-Natal. Discover our wedding facilities, story and services.">
+    <meta name="twitter:image" content="https://www.devolpe.co.za/assets/images/HERN2975.jpg">
+    <meta name="twitter:image:alt" content="DE VOLPE Grand Ceremony Hall in eMondlo, KwaZulu-Natal">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.devolpe.co.za/about.php">
@@ -41,24 +38,56 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "About DE VOLPE Wedding & Events",
-        "description": "Discover the story behind DE VOLPE wedding venue in eMondlo, KwaZulu-Natal. Learn about our elegant facilities, accommodations, and wedding packages.",
-        "url": "https://www.devolpe.co.za/about.php",
-        "mainEntity": {
-            "@type": "WeddingVenue",
-            "name": "DE VOLPE Wedding & Events",
-            "telephone": "+27648200293",
-            "email": "info@devolpe.co.za",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "R69 Mondlo/Vryheid Road",
-                "addressLocality": "eMondlo",
-                "addressRegion": "KwaZulu-Natal",
-                "postalCode": "3105",
-                "addressCountry": "ZA"
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://www.devolpe.co.za/#business",
+                "name": "DE VOLPE Wedding & Events",
+                "url": "https://www.devolpe.co.za/",
+                "logo": "https://www.devolpe.co.za/assets/images/devolpe-logo.png",
+                "image": [
+                    "https://www.devolpe.co.za/assets/images/HERN2975.jpg",
+                    "https://www.devolpe.co.za/assets/images/HERN2967.jpg",
+                    "https://www.devolpe.co.za/assets/images/HERN2983.jpg"
+                ],
+                "telephone": "+27648200293",
+                "email": "info@devolpe.co.za",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "R69 Mondlo/Vryheid Road",
+                    "addressLocality": "eMondlo",
+                    "addressRegion": "KwaZulu-Natal",
+                    "postalCode": "3105",
+                    "addressCountry": "ZA"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.devolpe.co.za/#website",
+                "url": "https://www.devolpe.co.za/",
+                "name": "DE VOLPE Wedding & Events",
+                "inLanguage": "en-ZA",
+                "publisher": {"@id": "https://www.devolpe.co.za/#business"}
+            },
+            {
+                "@type": "AboutPage",
+                "@id": "https://www.devolpe.co.za/about.php#webpage",
+                "url": "https://www.devolpe.co.za/about.php",
+                "name": "About DE VOLPE | Wedding Venue in eMondlo",
+                "description": "Explore DE VOLPE's ceremony hall, reception space and garden in eMondlo, KwaZulu-Natal. Discover our wedding facilities, story and services.",
+                "inLanguage": "en-ZA",
+                "isPartOf": {"@id": "https://www.devolpe.co.za/#website"},
+                "about": {"@id": "https://www.devolpe.co.za/#business"},
+                "mainEntity": {"@id": "https://www.devolpe.co.za/#business"}
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.devolpe.co.za/"},
+                    {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.devolpe.co.za/about.php"}
+                ]
             }
-        }
+        ]
     }
     </script>
 </head>
@@ -68,7 +97,7 @@
         <div class="nav-container">
             <img src="assets/images/devolpe-logo.png" alt="DE VOLPE Wedding & Events" class="logo">
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="about.php" class="nav-link active">About Us</a></li>
                 <li><a href="https://thespaceguesthouse.co.za" class="nav-link" target="_blank" rel="noopener">Book Accommodation</a></li>
                 <li><a href="contact.php" class="nav-link">Contact Us</a></li>
@@ -86,7 +115,7 @@
         <div class="breadcrumb-container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item">
-                    <a href="index.php"><i class="fas fa-home"></i> Home</a>
+                    <a href="/"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></li>
                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
@@ -133,9 +162,9 @@
             </div>
             <div class="grid grid-3">
                 <div class="card fade-in-up">
-                    <img src="assets/images/ceremony_wedding_vows.jpg" alt="Black couple wedding ceremony hall at DE VOLPE">
+                    <img src="assets/images/HERN2975.jpg" alt="Glass-fronted Grand Ceremony Hall at DE VOLPE">
                     <div class="card-content">
-                        <h3><i class="fas fa-church"></i> Grand Ceremony Hall</h3>
+                        <h3 class="facility-title">Grand Ceremony Hall</h3>
                         <p>Our magnificent ceremony hall features soaring ceilings, elegant architectural details, and beautiful natural lighting. Accommodates up to 200 guests with optional outdoor overflow seating.</p>
                         <ul style="margin-top: 1rem; padding-left: 1rem;">
                             <li>Climate controlled environment</li>
@@ -146,9 +175,9 @@
                     </div>
                 </div>
                 <div class="card fade-in-up">
-                    <img src="assets/images/dramatic_wedding_dance.jpg" alt="Black couple dancing at DE VOLPE reception hall">
+                    <img src="assets/images/HERN2967.jpg" alt="DE VOLPE reception hall">
                     <div class="card-content">
-                        <h3><i class="fas fa-glass-cheers"></i> Reception Hall</h3>
+                        <h3 class="facility-title">Reception Hall</h3>
                         <p>Our stunning reception hall combines elegance with functionality, featuring crystal chandeliers, premium finishes, and flexible layouts for unforgettable celebrations.</p>
                         <ul style="margin-top: 1rem; padding-left: 1rem;">
                             <li>Capacity for 180 seated guests</li>
@@ -159,9 +188,9 @@
                     </div>
                 </div>
                 <div class="card fade-in-up">
-                    <img src="assets/images/outdoor_wedding_embrace.jpg" alt="Black couple in DE VOLPE garden ceremony space">
+                    <img src="assets/images/HERN2983.jpg" alt="Landscaped garden path and lawn at DE VOLPE">
                     <div class="card-content">
-                        <h3><i class="fas fa-seedling"></i> Garden Ceremony Spaces</h3>
+                        <h3 class="facility-title">Garden Ceremony Spaces</h3>
                         <p>Beautiful outdoor ceremony areas surrounded by manicured gardens and natural landscapes, perfect for romantic outdoor weddings with breathtaking backdrops.</p>
                         <ul style="margin-top: 1rem; padding-left: 1rem;">
                             <li>Multiple ceremony locations</li>
@@ -184,9 +213,9 @@
             </div>
             <div class="grid grid-2">
                 <div class="card fade-in-up">
-                    <img src="assets/images/bridal_silhouette_portrait.jpg" alt="Black bride in bridal suite at DE VOLPE">
+                    <img src="assets/images/HERN2693.jpg" alt="Bridal suite bed prepared at DE VOLPE">
                     <div class="card-content">
-                        <h3><i class="fas fa-crown"></i> Bridal Suite</h3>
+                        <h3 class="facility-title">Bridal Suite</h3>
                         <p>Our elegant bridal suite provides the perfect sanctuary for the bride and groom, featuring beautiful decor, modern amenities, and stunning views.</p>
                         <ul style="margin-top: 1rem; padding-left: 1rem;">
                             <li>King-size bedroom with quality linens</li>
@@ -197,9 +226,9 @@
                     </div>
                 </div>
                 <div class="card fade-in-up">
-                    <img src="assets/images/couple_intimate_embrace.jpg" alt="Black couple in guest accommodation at DE VOLPE">
+                    <img src="assets/images/HERN2846.jpg" alt="Guest bedroom at DE VOLPE with a modern upholstered headboard">
                     <div class="card-content">
-                        <h3><i class="fas fa-bed"></i> Guest Accommodation</h3>
+                        <h3 class="facility-title">Guest Accommodation</h3>
                         <p>Comfortable and well-appointed rooms for wedding party members and guests, ensuring everyone enjoys a memorable stay at DE VOLPE.</p>
                         <ul style="margin-top: 1rem; padding-left: 1rem;">
                             <li>8 luxurious guest rooms available</li>
@@ -233,37 +262,37 @@
             <div class="grid grid-3">
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-calendar-check"></i> Wedding Planning</h3>
+                        <h3 class="service-title">Wedding Planning</h3>
                         <p>Our experienced wedding coordinators work with you to plan every detail of your special day, ensuring seamless execution from start to finish.</p>
                     </div>
                 </div>
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-utensils"></i> Catering Services</h3>
+                        <h3 class="service-title">Catering Services</h3>
                         <p>Exquisite culinary experiences featuring both local and international cuisine, prepared by our professional chefs using the finest ingredients.</p>
                     </div>
                 </div>
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-camera"></i> Photography Support</h3>
+                        <h3 class="service-title">Photography Support</h3>
                         <p>Our venue offers numerous picture-perfect locations and we work closely with professional photographers to capture your precious moments.</p>
                     </div>
                 </div>
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-music"></i> Audio Visual</h3>
+                        <h3 class="service-title">Audio Visual</h3>
                         <p>State-of-the-art sound systems, lighting, and projection equipment to enhance your ceremony and reception entertainment.</p>
                     </div>
                 </div>
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-car"></i> Transportation</h3>
+                        <h3 class="service-title">Transportation</h3>
                         <p>Convenient transportation services and ample parking facilities for your guests, ensuring easy access to our beautiful venue.</p>
                     </div>
                 </div>
                 <div class="card fade-in-up">
                     <div class="card-content">
-                        <h3><i class="fas fa-spa"></i> Bridal Services</h3>
+                        <h3 class="service-title">Bridal Services</h3>
                         <p>Pampering services including hair, makeup, and spa treatments available on-site to help you look and feel your absolute best.</p>
                     </div>
                 </div>
@@ -279,7 +308,7 @@
                 <p>Contact us today to schedule a venue tour and discuss your wedding vision</p>
                 <div style="margin-top: 2rem;">
                     <a href="contact.php" class="btn btn-primary" style="margin-right: 1rem;">Schedule a Visit</a>
-                    <a href="tel:+27648200293" class="btn btn-secondary">Call Us Now</a>
+                    <a href="tel:+27648200293" class="btn btn-secondary about-call-button">Call Us Now</a>
                 </div>
             </div>
         </div>
